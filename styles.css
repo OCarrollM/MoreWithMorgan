@@ -1,0 +1,329 @@
+
+
+/* --------------------------- */
+/* 1. General Reset & Defaults */
+/* --------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* 
+    BODY BACKGROUND:
+    A diagonal linear gradient from a light cream (#FFF9EC) 
+    to a friendly orange (#FFA552). Feel free to tweak!
+  */
+  body {
+    background: linear-gradient(135deg, #FFF9EC 0%, #FFA552 100%);
+    padding-top: 70px; /* Enough space to offset navbar height */
+  }
+  
+  
+  /* --------------------------- */
+  /* 2. Navbar */
+  /* --------------------------- */
+  .navbar {
+    position: fixed;          /* So it stays at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  
+    /* Existing navbar styling */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 127, 80, 0.9);
+    padding: 1rem 2rem;
+  
+    /* Add a smooth transition for the hide/show effect */
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-hide {
+    transform: translateY(-100%); /* Shift it upwards so it's hidden */
+  }
+  
+  
+  .navbar-logo {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.25rem;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navbar-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+  }
+  
+  .navbar-links li a:hover {
+    opacity: 0.7;
+  }
+  
+  /* --------------------------- */
+  /* 3. Hero Section */
+  /* --------------------------- */
+  /* 
+     Remove the dedicated background so the main body gradient shows through.
+     Use some padding & text styling to maintain readability.
+  */
+  .hero {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* You may want a semi-transparent background for readability if your gradient is bright */
+  .hero-content {
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+  
+  .cta-button {
+    background-color: #333;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #444;
+  }
+  
+  /* --------------------------- */
+  /* 4. Manifesto Section */
+  /* --------------------------- */
+  .manifesto-section {
+    padding: 3rem 2rem;
+    color: #333;
+    text-align: center;
+    /* No background-color, so the gradient behind shows through */
+  }
+  
+  /* Optionally add a semi-transparent background for better readability */
+  .manifesto-section {
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 2rem 1rem;
+    border-radius: 8px;
+  }
+  
+  .manifesto-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .manifesto-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .manifesto-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  
+  .manifesto-list li a {
+    background-color: #fff;
+    color: #333;
+    padding: 1rem;
+    display: block;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .manifesto-list li a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* --------------------------- */
+  /* 5. Individual Points Sections */
+  /* --------------------------- */
+  .point-section {
+    padding: 3rem 2rem;
+    margin: 2rem 1rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+  }
+  
+  .point-section h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #FF7F50; /* Coral headings */
+  }
+  
+  .point-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .point-section ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+  }
+  
+  /* --------------------------- */
+  /* 6. Contact Section */
+  /* --------------------------- */
+  .contact-section {
+    padding: 3rem 2rem;
+    margin: 2rem 1rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #FF7F50;
+  }
+  
+  .contact-section p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  .social-links {
+    display: flex;
+    gap: 1.5rem;       /* Space between each link */
+    justify-content: center;  /* Center them horizontally */
+    margin-top: 1.5rem;       /* Spacing above/below this section */
+  }
+  
+  .social-links a {
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    display: inline-flex;  /* So icon and text sit nicely side by side */
+    align-items: center;
+    gap: 0.5rem;           /* Space between icon and text */
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Optional: style the icons a bit bigger if desired */
+  .social-links i {
+    font-size: 1.2rem;
+  }
+
+    /* --------------------------- */
+  /* 7. Pumps */
+  /* --------------------------- */
+/* SECTION WRAPPER */
+.pumpkin-endorsement {
+    display: flex;               /* Puts image & speech bubble side by side */
+    align-items: center;         /* Vertically centers them */
+    justify-content: center;     /* Centers horizontally in the parent container */
+    gap: 1.5rem;                 /* Space between the cat and the bubble */
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 2rem 1rem;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  /* CAT IMAGE */
+  .pumpkin-image {
+    max-width: 200px;  /* Adjust size to your liking */
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* SPEECH BUBBLE CONTAINER */
+  .speech-bubble {
+    position: relative; 
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    max-width: 400px;  /* Limit width so text doesn't stretch too far */
+    
+    /* Optional shadow or border for a cartoon feel */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  }
+  
+  /* The text in the bubble */
+  .speech-bubble p {
+    margin: 0;              /* Remove default paragraph margin */
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+  
+  /* TRIANGLE "TAIL" OF THE BUBBLE */
+  .speech-bubble::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;    /* Positions the tip to the left side, near the cat */
+    transform: translateY(-50%);
+    
+    /* The triangle shape: wide borders on 3 sides are transparent,
+       one side is bubble-colored. Here, the right side is the pointer. */
+    border: 10px solid transparent;
+    border-right-color: #fff;   /* match the .speech-bubble background */
+  }
+  
+  
+  
+  /* --------------------------- */
+  /* 7. Footer */
+  /* --------------------------- */
+  .footer {
+    background-color: rgba(51, 51, 51, 0.9);
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-radius: 8px;
+    margin: 2rem 1rem;
+  }
+
+
