@@ -141,6 +141,7 @@
   /* --------------------------- */
   /* 4. Manifesto Section */
   /* --------------------------- */
+
   .manifesto-section {
     padding: 3rem 2rem;
     color: #333;
@@ -186,6 +187,33 @@
   }
   
   .manifesto-list li a:hover {
+    background-color: #f0f0f0;
+  }
+
+  #more {
+    display: none;
+  }
+  #more2 {
+    display: none;
+  }
+  #more3 {
+    display: none;
+  }
+
+  .read-more-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #333;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .read-more-btn:hover {
     background-color: #f0f0f0;
   }
   
