@@ -90,15 +90,6 @@
     overflow: hidden;
   }
 
-  #rain-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-  }
   
   /* You may want a semi-transparent background for readability if your gradient is bright */
   .hero-content {
@@ -114,15 +105,13 @@
   }
 
   .profile-image {
-    position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 200%;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid black;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    top: 120px;
-    left: 70px;
+    margin-bottom: 1rem;
   }
   
   .hero-content h1 {
@@ -389,25 +378,7 @@
 
 /* Tablet & larger: min-width: 768px */
 @media (min-width: 768px) {
-  .hero {
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .hero-content {
-    padding: 2rem;
-  }
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-  /* Possibly position the .profile-image absolutely for “pop out” 
-     only on screens >= 768px */
-  .profile-image {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-  }
+
 }
 
 /* Desktop & larger: min-width: 1024px */
