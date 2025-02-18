@@ -1,13 +1,39 @@
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function() {
+//   var currentScrollPos = window.pageYOffset;
+//   if (prevScrollpos > currentScrollPos) {
+//     document.getElementById("navbar").style.top = "0";
+//   } else {
+//     document.getElementById("navbar").style.top = "-50px";
+//   }
+//   prevScrollpos = currentScrollPos;
+// }
+
+let prevScrollpos = window.pageYOffset;
+
+window.addEventListener('scroll', () => {
+  const currentScrollPos = window.pageYOffset;
+  const navbar = document.getElementById('navbar');
+  const viewportWidth = window.innerWidth; // check screen size
+
+  // If the viewport is below 600px, always show the navbar
+  if (viewportWidth < 600) {
+    navbar.style.top = "0";
+    return; // exit the scroll function early
   }
+  
+  // Otherwise, do the classic hide-on-scroll logic
+  if (prevScrollpos > currentScrollPos) {
+    // user scrolled UP -> show
+    navbar.style.top = "0";
+  } else {
+    // user scrolled DOWN -> hide
+    navbar.style.top = "-50px";
+  }
+
   prevScrollpos = currentScrollPos;
-}
+});
+
 
 function readMoreBtnWed() {
   var dots = document.getElementById("read");

@@ -351,6 +351,10 @@ body {
 /* --------------------------- */
 
 @media (min-width: 768px) {
+    body {
+        margin-top: 10px;
+    }
+
     .hero {
         min-height: 70vh;
     }
@@ -409,4 +413,23 @@ body {
       margin-top: 1rem;
       box-sizing: border-box;
     }
+}
+
+@media (max-width: 375px) {
+    .navbar-links li a {
+      font-size: 0.85rem; /* smaller link text */
+    }
+    .navbar-logo {
+      font-size: 1rem; /* smaller logo text */
+    }
   }
+  
+  /* For Mobile S (~320px) */
+@media (max-width: 320px) {
+    .navbar-links li a {
+      font-size: 0.65rem;
+    }
+    .navbar-logo {
+      font-size: 0.8rem;
+    }
+}
